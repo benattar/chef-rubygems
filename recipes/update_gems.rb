@@ -19,5 +19,6 @@
 include_recipe "rubygems::default"
 
 execute "update rubygems (system)" do
-  command "gem update --system"
+  command "gem install rubygems-update"
+  command "cd /var/lib/gems/1.9.1/bin ; ./update_rubygems"
 end
